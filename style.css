@@ -311,6 +311,53 @@ p { line-height: 1.65; color: var(--text-light); font-size: 1.05rem; }
 }
 .about-text p { margin-bottom: 1rem; }
 
+/* About photo grid — replaces inline styles */
+.about-photo-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  min-width: 0;
+}
+.about-photo-wide {
+  grid-column: 1 / -1;
+  aspect-ratio: 16 / 7;
+}
+
+/* ── ADULT POOL ── */
+.adult-pool-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+}
+.adult-pool-badge {
+  display: inline-block;
+  background: var(--sky-dark);
+  color: #fff;
+  font-weight: 800;
+  font-size: 0.82rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 0.35rem 1rem;
+  border-radius: 50px;
+}
+.adult-pool-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-top: 1.4rem;
+}
+.chip {
+  background: var(--white);
+  border: 2px solid var(--aqua);
+  border-radius: 50px;
+  padding: 0.35rem 0.9rem;
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: var(--sky-dark);
+  white-space: nowrap;
+}
+
 /* ── WAVE DIVIDER ── */
 .wave-divider {
   line-height: 0;
@@ -695,6 +742,7 @@ body { overflow-x: hidden; }
   .hero-btns { justify-content: center; }
   .hero-text p { max-width: 100%; }
   .about-grid { grid-template-columns: 1fr; }
+  .adult-pool-grid { grid-template-columns: 1fr; }
   .lg-hero { grid-template-columns: 1fr; }
   .info-2col { grid-template-columns: 1fr; }
   .photo-grid-3 { grid-template-columns: 1fr 1fr; }
@@ -731,6 +779,9 @@ body { overflow-x: hidden; }
   .container { padding: 0 1rem; }
 
   /* Grids → single column */
+  .about-grid { grid-template-columns: 1fr; }
+  .about-photo-grid { grid-template-columns: 1fr 1fr; } /* keep 2-col on small phones, they're small squares */
+  .adult-pool-grid { grid-template-columns: 1fr; }
   .photo-grid-3 { grid-template-columns: 1fr; }
   .footer-inner { grid-template-columns: 1fr; gap: 1.8rem; }
   .season-grid { grid-template-columns: 1fr; }
@@ -741,6 +792,9 @@ body { overflow-x: hidden; }
   .features-grid { grid-template-columns: 1fr 1fr; }
   .two-col-grid { grid-template-columns: 1fr !important; gap: 1.8rem; }
   .two-col-even { grid-template-columns: 1fr !important; gap: 1.8rem; }
+
+  /* Chips wrap nicely already, just ensure font size is ok */
+  .chip { font-size: 0.82rem; }
 
   /* Hours table — allow text to wrap */
   .hours-table th,
