@@ -271,9 +271,18 @@ p { line-height: 1.65; color: var(--text-light); font-size: 1.05rem; }
 
 /* ── FEATURE CARDS ── */
 .features-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  display: flex;
+  flex-direction: column;
   gap: 1.2rem;
+}
+.features-row {
+  display: flex;
+  justify-content: center;
+  gap: 1.2rem;
+  flex-wrap: wrap;
+}
+.features-row-centered {
+  justify-content: center;
 }
 .feature-card {
   background: var(--white);
@@ -282,6 +291,8 @@ p { line-height: 1.65; color: var(--text-light); font-size: 1.05rem; }
   padding: 1.6rem 1rem;
   text-align: center;
   transition: transform 0.2s;
+  flex: 0 1 200px;   /* won't grow beyond 200px, won't shrink below content */
+  min-width: 140px;
 }
 .feature-card:hover { transform: translateY(-5px); }
 .feature-icon {
