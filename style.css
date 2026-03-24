@@ -93,8 +93,7 @@ p { line-height: 1.65; color: var(--text-light); font-size: 1.05rem; }
   width: auto;
   display: block;
 }
-/* Hide old text/icon elements if still in HTML */
-.nav-logo-text span { display: none; }
+.nav-logo-text { display: none; }
 .nav-logo-icon { display: none; }
 .nav-links {
   display: flex;
@@ -122,8 +121,7 @@ p { line-height: 1.65; color: var(--text-light); font-size: 1.05rem; }
   background: none;
   border: none;
   cursor: pointer;
-  padding: 4px;
-  margin-left: auto;
+  padding: 8px;
   flex-shrink: 0;
 }
 .nav-toggle span {
@@ -134,20 +132,6 @@ p { line-height: 1.65; color: var(--text-light); font-size: 1.05rem; }
   border-radius: 2px;
   transition: all 0.25s;
 }
-.nav-toggle {
-  display: none;
-  flex-direction: column;
-  gap: 5px;
-  background: none;
-  border: none;
-  cursor: pointer;
-  padding: 4px;
-}
-.nav-toggle span {
-  display: block;
-  width: 26px;
-  height: 2.5px;
-  background: var(--sky-dark);
   border-radius: 2px;
   transition: all 0.25s;
 }
@@ -774,20 +758,27 @@ body { overflow-x: hidden; }
 }
 
 @media (max-width: 640px) {
-  /* Nav */
+  /* Nav — logo left, hamburger right, one line */
+  .nav-inner {
+    height: 80px;
+    padding: 0;
+  }
   .nav-links {
     display: none;
     flex-direction: column;
     position: absolute;
-    top: 90px; left: 0; right: 0;
+    top: 80px; left: 0; right: 0;
     background: #fff;
-    padding: 1rem 2rem;
+    padding: 1rem 1.5rem;
     box-shadow: 0 8px 20px rgba(0,0,0,0.08);
     gap: 0.2rem;
     z-index: 99;
   }
   .nav-links.open { display: flex; }
-  .nav-toggle { display: flex; margin-left: auto; }
+  .nav-toggle {
+    display: flex;
+    margin-left: auto;
+  }
 
   /* Typography */
   h1 { font-size: 2rem; }
