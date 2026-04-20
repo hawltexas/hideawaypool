@@ -829,3 +829,10 @@ body { overflow-x: hidden; }
   /* Footer */
   footer { padding: 2.5rem 1rem 1.5rem; }
 }
+
+/* Desktop Layout Fix */
+@media (min-width: 768px) {
+  .features-row {
+    display: contents;
+  }
+}
