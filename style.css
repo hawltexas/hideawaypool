@@ -630,6 +630,51 @@ p { line-height: 1.65; color: var(--text-light); font-size: 1.05rem; }
 }
 .manager-info p { font-size: 0.95rem; }
 
+/* ── WATER AEROBICS ── */
+.aerobics-wrap {
+  max-width: 760px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.aerobics-wrap p {
+  max-width: 640px;
+  margin: 0 auto 1.8rem;
+}
+
+.aerobics-list {
+  list-style: none;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.aerobics-list li {
+  background: var(--white);
+  border-radius: var(--radius);
+  box-shadow: var(--card-shadow);
+  padding: 1rem 1.2rem;
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  font-weight: 700;
+  color: var(--text);
+  text-align: left;
+}
+
+.aerobics-list span {
+  font-size: 1.2rem;
+  color: var(--sky);
+  flex-shrink: 0;
+}
+
+@media (max-width: 640px) {
+  .aerobics-list {
+    grid-template-columns: 1fr;
+  }
+}
+
 /* ── INFO GRID (location+hours) ── */
 .info-2col {
   display: grid;
