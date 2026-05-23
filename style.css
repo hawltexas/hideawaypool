@@ -370,6 +370,17 @@ p { line-height: 1.65; color: var(--text-light); font-size: 1.05rem; }
 .wave-divider svg { display: block; width: 100%; }
 
 /* ── HOURS TABLE ── */
+.hours-table .day-col {
+  color: var(--text);
+  font-weight: 700;
+  width: 34%;
+  min-width: 140px;
+}
+
+.hours-table .time-col {
+  color: var(--sky-dark);
+  width: 66%;
+}
 .hours-table {
   width: 100%;
   border-collapse: separate;
